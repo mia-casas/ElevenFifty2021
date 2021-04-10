@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- All of our HTML code will go here -->
+     <h1>Hello World</h1>
+     <p id="testParagraph">sample text</p>
+     <p class="sampleClass">This paragraph is an example of class selector</p>
+    <button id="clickThisButton">I want to be a button</button>
+     <script type="text/javascript">
+         /* All of our JavaScript code will go here */
+
+//DOM Manipulation         
+         document.getElementById('testParagraph').style.color = "blue"
+         console.log(testParagraph.style.color)
+         // console.log(document.getElementById('testParagraph').style.color);
+        console.log(document.querySelectorAll("p.sampleClass"));
+
+        // innerText vs innerHTML
+        document.querySelectorAll("p.sampleClass")[0].innerText = "My text was changed!";
+        document.querySelectorAll("p.sampleClass")[0].innerHTML = ""
+
+        document.getElementById('clickThisButton').addEventListener('click', () =>{
+            console.log("I was clicked")
+        } );
+// Event details
+document.getElementById('clickThisButton').addEventListener('click', (details) => {
+    console.log(details);
+});
+// "Target" to change color
+document.getElementById('clickThisButton').addEventListener('click', (details) => {
+     details.target.style.backgroundColor = 'red';
+});
+
+
+// Event Listeners ie. click, press key, submit form, move mouse, etc
+// syntax: document.getELementById('clickThisButton').addEventListener('click, *function goes here')        
+                                                                    // *name event      *fat arrow function
+
+    </script>
+</body>
+</html>
